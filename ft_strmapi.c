@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hsacikar <42istanbul.com.tr>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/10 20:52:44 by hsacikar          #+#    #+#             */
+/*   Updated: 2022/01/10 20:52:45 by hsacikar         ###   ########.tr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char *ft_strmapi(char const *s, char(*f)(unsigned int, char))
@@ -15,10 +27,4 @@ char *ft_strmapi(char const *s, char(*f)(unsigned int, char))
         c_s[i] = (*f)(i, s[i]);
     c_s[i] = '\0';
     return (c_s);
-}
-
-int main()
-{
-    char dizi = "a";
-    printf("%s", ft_strmapi("1234", dizi));
 }
